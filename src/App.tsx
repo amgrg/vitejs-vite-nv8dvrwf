@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { db } from './services/database';
-import { Store, Product } from './lib/supabase';
+import type { Store, Product } from './lib/supabase';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
