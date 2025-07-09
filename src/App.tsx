@@ -295,10 +295,16 @@ function App() {
                   </div>
 
                   <button 
-                    onClick={() => handleProductClick(product)}
+                    onClick={() => {
+                      handleProductClick(product);
+                      // Open Google Maps with store address
+                      const address = encodeURIComponent(product.store_address || '');
+                      const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${address}`;
+                      window.open(mapsUrl, '_blank');
+                    }}
                     className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors"
                   >
-                    🛒 Aggiungi al carrello
+                    📍 Vieni in negozio
                   </button>
                 </div>
               ))}
