@@ -1,5 +1,7 @@
 import {
   supabase,
+} from '../lib/supabase';
+import type {
   Store,
   Product,
   SearchAnalytic,
